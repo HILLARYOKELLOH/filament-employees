@@ -29,8 +29,8 @@ class EmployeesStatsOverview extends BaseWidget
             Card::make('All Employees', Employees::all()->count())->description($employees_count_data.' Increase')->descriptionIcon('heroicon-s-trending-up')
             ->chart([7, 2, 10, 3])
             ->color('success'),
-            Card::make('Kenya Employees', $kenya ? $kenya->employees_count:0),
-            Card::make('Kenya2 Employees', $kenya2 ? $kenya2->employees_count:0),
+            Card::make('Kenya Employees', $kenya ? $kenya->employees_count:0)->description('increase')->descriptionIcon('heroicon-s-trending-up')->chart([2,8, 1,7])->color('danger'),
+            Card::make('Kenya2 Employees', $kenya2 ? $kenya2->employees_count:0)->description('increase')->descriptionIcon('heroicon-s-trending-up')->chart([2,8, 1,7])->color('primary'),
 
         ];
     }
